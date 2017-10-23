@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
                 boolean isAgeOk = false;
                 String ageContent = age.getText().toString();
-                Pattern pattern2 = Pattern.compile("^[0-9]{3}+$");
+                Pattern pattern2 = Pattern.compile("^[0-9]{1,3}+$");
                 Matcher m2 = pattern2.matcher(ageContent);
                 while (m2.find()) {
                     isAgeOk = true;
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
                 boolean isEmailOk = false;
                 String emailContent = email.getText().toString();
-                Pattern pattern4 = Pattern.compile("^[0-9a-zA-Z .-_@]+$");
+                Pattern pattern4 = Pattern.compile("[a-zA-Z0-9]+[._a-zA-Z0-9!#$%&'*+-/=?^_`{|}~]*[a-zA-Z]*@[a-zA-Z0-9]{2,8}.[a-zA-Z.]{2,6}");
                 Matcher m4 = pattern4.matcher(emailContent);
                 while (m4.find()) {
                     isEmailOk = true;
